@@ -1,0 +1,1 @@
+DISM /Online /Remove-Capability /CapabilityName:WMIC~~~~

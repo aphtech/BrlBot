@@ -1,0 +1,2 @@
+DISM /Online /Remove-Capability /CapabilityName:WMIC~~~~
+DISM /Online /Add-Capability /CapabilityName:WMIC~~~~

@@ -1,0 +1,18 @@
+Run these in PowerShell opened as Administrator (right-click Start > Terminal (Admin)).
+Leave the window open until each one says "The operation completed successfully."
+
+STEP 1 - Remove the broken install:
+
+DISM /Online /Remove-Capability /CapabilityName:WMIC~~~~
+
+STEP 2 - Restart the computer.
+
+STEP 3 - Open PowerShell as Administrator again and install WMIC:
+
+DISM /Online /Add-Capability /CapabilityName:WMIC~~~~
+
+STEP 4 - Restart the computer again.
+
+STEP 5 - Check that it worked (should print True):
+
+Test-Path C:\Windows\System32\wbem\WMIC.exe
